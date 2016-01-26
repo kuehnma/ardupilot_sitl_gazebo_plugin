@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(recorder_camera_plugin)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 # Load catkin and all dependencies required for this package
 find_package(catkin REQUIRED COMPONENTS
    roscpp
