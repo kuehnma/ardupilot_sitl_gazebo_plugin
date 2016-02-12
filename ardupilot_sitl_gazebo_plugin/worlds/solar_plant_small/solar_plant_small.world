@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="solar_plant_small">
+    <include>
+      <uri>model://grass_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <pose>-15 -15 0 0 0 0 </pose>
+      <uri>model://landing_pad</uri>
+    </include>
+
+
+<population name="panels">
+      <model name="row2">
+        <include>
+          <static>true</static>
+          <uri>model://panel_2x5</uri>
+        </include>
+      </model>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>100 100 0.01</size>
+      </box>
+      <model_count>2</model_count>
+      <distribution>
+        <type>grid</type>
+	<rows>5</rows>
+        <cols>10</cols>
+        <step>3 4 0</step>
+      </distribution>
+    </population>
+
+  </world>
+</sdf>
