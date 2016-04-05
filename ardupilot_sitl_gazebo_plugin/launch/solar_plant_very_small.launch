@@ -1,4 +1,7 @@
 <launch>
+
+  <arg name="gui" default="true"/>
+  
   <include file="$(find ardupilot_sitl_gazebo_plugin)/launch/iris_spawn.launch">
     <arg name="x" value="0.0"/> <!-- [m], positive to the North   1.0-->
     <arg name="y" value="0.0"/> <!-- [m], negative to the East   -8 -->
@@ -6,6 +9,8 @@
     <arg name="roll" value="0"/> <!-- [rad] -->
     <arg name="pitch" value="0"/> <!-- [rad] -->
     <arg name="yaw" value="0"/> <!-- [rad], negative clockwise -->
+   
+    <arg name="gui" value="$(arg gui)"/>
     
     <arg name="world_name"
      value="$(find ardupilot_sitl_gazebo_plugin)/worlds/solar_plant_very_small/solar_plant_very_small.world"/>  

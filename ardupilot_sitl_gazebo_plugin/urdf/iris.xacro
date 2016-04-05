@@ -191,7 +191,7 @@
     parent="base_link"
     ros_topic="image_raw"
     cam_info_topic="camera_info"
-    update_rate="60"
+    update_rate="20"
     res_x="640"
     res_y="360"
     image_format="R8G8B8"
